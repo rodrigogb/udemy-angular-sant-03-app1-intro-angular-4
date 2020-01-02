@@ -2,7 +2,8 @@
   <div class="jumbotron">
     <div class="row">
       <div class="col-sm-6">
-        <app-progresso></app-progresso>
+        <!--[progresso] (do componente filho) recebe "progresso" (do componente pai)-->
+        <app-progresso [progresso]="progresso"></app-progresso>
       </div>
       <div class="col-sm-6">
         <div class="d-flex justify-content-end">
@@ -18,7 +19,8 @@
           <textarea 
             class="form-control" 
             rows="3" 
-            (input)="atualizaResposta($event)">          
+            (input)="atualizaResposta($event)"
+            [value]="resposta">           
           </textarea>
         </div>
       </div>
